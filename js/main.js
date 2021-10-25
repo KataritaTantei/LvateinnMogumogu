@@ -14,3 +14,18 @@ async function getFile() {
         console.log('ディレクトリを開いたよ！')
     }
 }
+
+let directoryHandle;
+
+async function getDirectory() {
+    // ディレクトリピッカーを開く
+    [directoryHandle] = await window.showDirectoryPicker();
+
+    if(directoryHandle.kind === 'file') {
+        // ファイルを開いた時の処理
+        console.log('ファイルを開いたよ！');
+    } else if(directoryHandle.kind === 'directory' ) {
+        // ディレクトリを開いた時の処理
+        console.log('ディレクトリを開いたよ！');
+    }
+}
