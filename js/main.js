@@ -29,3 +29,7 @@ async function getDirectory() {
         console.log('ディレクトリを開いたよ！');
     }
 }
+
+// イベントを定義
+ document.getElementById('1').addEventListener('click', getFile());
+ document.getElementById('2').addEventListener('click', getDirectory());
